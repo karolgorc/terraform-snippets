@@ -73,7 +73,7 @@ resource "google_compute_region_backend_service" "default" {
 
 # instance template
 resource "google_compute_instance_template" "instance_template" {
-  name         = "l7-ilb-mig-template"
+  name_prefix         = "l7-ilb-mig-template-"
   provider     = google-beta
   machine_type = "e2-small"
   tags         = ["http-server"]
